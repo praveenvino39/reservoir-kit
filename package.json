@@ -55,8 +55,7 @@
     "viem": "~1.0.6"
   },
   "engines": {
-    "node": ">=12",
-    "yarn": ">=2"
+    "node": ">=12"
   },
   "packageManager": "yarn@3.2.3",
   "dependencies": {
