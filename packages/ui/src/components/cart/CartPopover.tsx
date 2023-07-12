@@ -153,9 +153,8 @@ export function CartPopover({
                 p: 24,
                 minHeight: 500,
                 width: 395,
-                maxHeight: `calc(100vh - ${
-                  triggerBottom || 0
-                }px - (25px * 2) - 10px)`,
+                maxHeight: `calc(100vh - ${triggerBottom || 0
+                  }px - (25px * 2) - 10px)`,
                 backgroundColor: '$contentBackground',
                 boxSizing: 'border-box',
                 '@media(max-width: 520px)': {
@@ -177,7 +176,7 @@ export function CartPopover({
                 />
               )}
               <Flex align="center" css={{ mb: '$4' }}>
-                <Text style="h6">Cart</Text>
+                <Text style="h6">Cartyyyyyyy</Text>
                 {!isCartEmpty && (
                   <Flex
                     align="center"
@@ -258,7 +257,7 @@ export function CartPopover({
                   kind="error"
                   message={
                     transaction.errorType ===
-                    CheckoutTransactionError.UserDenied
+                      CheckoutTransactionError.UserDenied
                       ? 'User denied transaction signature.'
                       : transaction.error.message
                   }

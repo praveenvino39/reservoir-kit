@@ -91,7 +91,7 @@ const Index: NextPage = () => {
           <a>TokenMedia</a>
         </Link>
         <Link href="/ui/cart">
-          <a>Cart</a>
+          <a>Cart-link</a>
         </Link>
       </nav>
     </div>
