@@ -3,7 +3,6 @@ node_modules
 .parcel-cache
 demo/.env
 .env
-dist
 
 #yarn
 .pnp.*
