@@ -5,6 +5,7 @@
   "description": "ReservoirKit is the official frontend kit to get you started building dApps with the ReservoirProtocol.",
   "author": "Reservoir Protocol",
   "license": "MIT",
+  "main": "packages/ui/dist/index.module.js",
   "workspaces": [
     "packages/*",
     "demo",
