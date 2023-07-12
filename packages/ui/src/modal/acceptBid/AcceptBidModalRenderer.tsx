@@ -506,7 +506,7 @@ export const AcceptBidModalRenderer: FC<Props> = ({
 
   return (
     <>
-      <div className='accept-modal'>
+      <div className='accept-bid-modal'>
         {children({
           loading: isFetchingBidPath || isFetchingTokenData,
           tokensData: enhancedTokens,
