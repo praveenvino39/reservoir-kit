@@ -410,7 +410,7 @@ export function CartPopover({
                   </Flex>
                 )}
                 {isCartEmpty && !displayPendingTransaction && (
-                  <Button disabled={true}>Select Items to Buy</Button>
+                  <Button disabled={true}>Select Items to Buy....</Button>
                 )}
                 {!isCartEmpty &&
                   hasValidItems &&

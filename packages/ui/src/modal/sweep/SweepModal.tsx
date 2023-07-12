@@ -44,7 +44,7 @@ const ModalCopy = {
   title: 'Buy',
   ctaClose: 'Close',
   ctaBuy: 'Buy',
-  ctaBuyDisabled: 'Select Items to Buy',
+  ctaBuyDisabled: 'Select Items to Buy..***',
   ctaInsufficientFunds: 'Add Funds to Purchase',
   ctaAwaitingApproval: 'Waiting for Approval...',
 }
@@ -147,15 +147,15 @@ export function SweepModal({
 
         const pathMap = stepData?.path
           ? (stepData.path as Path[]).reduce(
-              (paths: Record<string, Path>, path: Path) => {
-                if (path.orderId) {
-                  paths[path.orderId] = path
-                }
+            (paths: Record<string, Path>, path: Path) => {
+              if (path.orderId) {
+                paths[path.orderId] = path
+              }
 
-                return paths
-              },
-              {} as Record<string, Path>
-            )
+              return paths
+            },
+            {} as Record<string, Path>
+          )
           : {}
 
         const salesTxHashes =
@@ -212,9 +212,9 @@ export function SweepModal({
                       isItemsToggled
                         ? 1
                         : Math.min(
-                            0.01,
-                            availableTokens?.[0]?.totalPrice || 0.01
-                          )
+                          0.01,
+                          availableTokens?.[0]?.totalPrice || 0.01
+                        )
                     }
                     value={
                       isItemsToggled ? [itemAmount || 0] : [ethAmount || 0]
@@ -291,7 +291,7 @@ export function SweepModal({
                             currency={currency}
                             amount={
                               token?.currency != chainCurrency.address &&
-                              isChainCurrency
+                                isChainCurrency
                                 ? token?.buyInQuote
                                 : token?.totalPrice
                             }
@@ -413,7 +413,7 @@ export function SweepModal({
                     </Flex>
                   ) : null}
                   {stepData?.currentStep &&
-                  stepData.currentStep.id === 'auth' ? (
+                    stepData.currentStep.id === 'auth' ? (
                     <>
                       <SigninStep css={{ mt: 48, mb: '$4', gap: 20 }} />
                       <Button disabled={true} css={{ mt: '$4', width: '100%' }}>
@@ -424,10 +424,10 @@ export function SweepModal({
                   ) : null}
 
                   {stepData?.currentStep &&
-                  stepData?.currentStep?.id !== 'auth' ? (
+                    stepData?.currentStep?.id !== 'auth' ? (
                     <>
                       {stepData?.currentStep?.items &&
-                      stepData?.currentStep?.items.length > 1 ? (
+                        stepData?.currentStep?.items.length > 1 ? (
                         <Flex
                           direction="column"
                           css={{ gap: '$4', width: '100%' }}
@@ -554,19 +554,17 @@ export function SweepModal({
                   </Box>
                   <Text style="h5" css={{ textAlign: 'center' }}>
                     {failedSales
-                      ? `${successfulSales} ${
-                          successfulSales > 1 ? 'items' : 'item'
-                        } purchased, ${failedSales} ${
-                          failedSales > 1 ? 'items' : 'item'
-                        } failed`
+                      ? `${successfulSales} ${successfulSales > 1 ? 'items' : 'item'
+                      } purchased, ${failedSales} ${failedSales > 1 ? 'items' : 'item'
+                      } failed`
                       : 'Congrats! Purchase was successful.'}
                   </Text>
                   <Flex direction="column" css={{ gap: '$2', mb: '$3' }}>
                     {stepData?.currentStep?.items?.map((item) => {
                       const txHash = item.txHash
                         ? `${item.txHash.slice(0, 4)}...${item.txHash.slice(
-                            -4
-                          )}`
+                          -4
+                        )}`
                         : ''
 
                       return (
