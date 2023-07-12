@@ -309,7 +309,7 @@ export function AcceptBidModal({
                             textStyle="h6"
                           />
                           {price.currency?.symbol &&
-                          usdPrices[price.currency.symbol] ? (
+                            usdPrices[price.currency.symbol] ? (
                             <FormatCurrency
                               color="subtle"
                               style="tiny"
@@ -513,19 +513,17 @@ export function AcceptBidModal({
                   </Box>
                   <Text style="h5" css={{ my: 24 }}>
                     {failedSales
-                      ? `${successfulSales} ${
-                          successfulSales > 1 ? 'items' : 'item'
-                        } sold, ${failedSales} ${
-                          failedSales > 1 ? 'items' : 'item'
-                        } failed`
+                      ? `${successfulSales} ${successfulSales > 1 ? 'items' : 'item'
+                      } sold, ${failedSales} ${failedSales > 1 ? 'items' : 'item'
+                      } failed`
                       : `${totalSales > 1 ? 'Offers' : 'Offer'} accepted!`}
                   </Text>
                   <Flex direction="column" css={{ gap: '$2', mb: '$3' }}>
                     {stepData?.currentStep?.items?.map((item) => {
                       const txHash = item.txHash
                         ? `${item.txHash.slice(0, 4)}...${item.txHash.slice(
-                            -4
-                          )}`
+                          -4
+                        )}`
                         : ''
                       return (
                         <Anchor

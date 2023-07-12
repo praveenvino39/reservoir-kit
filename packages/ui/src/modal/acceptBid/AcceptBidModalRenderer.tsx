@@ -217,7 +217,7 @@ export const AcceptBidModalRenderer: FC<Props> = ({
           wallet,
           options,
           precheck: true,
-          onProgress: () => {},
+          onProgress: () => { },
         })
         .then((data) => {
           setBidsPath(
@@ -506,20 +506,22 @@ export const AcceptBidModalRenderer: FC<Props> = ({
 
   return (
     <>
-      {children({
-        loading: isFetchingBidPath || isFetchingTokenData,
-        tokensData: enhancedTokens,
-        acceptBidStep,
-        transactionError,
-        txHash,
-        usdPrices,
-        prices,
-        address,
-        blockExplorerBaseUrl,
-        acceptBid,
-        setAcceptBidStep,
-        stepData,
-      })}
+      <div className='accept-modal'>
+        {children({
+          loading: isFetchingBidPath || isFetchingTokenData,
+          tokensData: enhancedTokens,
+          acceptBidStep,
+          transactionError,
+          txHash,
+          usdPrices,
+          prices,
+          address,
+          blockExplorerBaseUrl,
+          acceptBid,
+          setAcceptBidStep,
+          stepData,
+        })}
+      </div>
     </>
   )
 }
