@@ -47,7 +47,7 @@ type BidData = {
 }
 
 const ModalCopy = {
-  title: 'Accept Offer',
+  title: 'Accept Offering.....',
   ctaAccept: 'Accept',
   ctaAwaitingApproval: 'Waiting for Approval',
   ctaClose: 'Close',
