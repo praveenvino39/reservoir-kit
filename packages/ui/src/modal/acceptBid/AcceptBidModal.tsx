@@ -177,6 +177,7 @@ export function AcceptBidModal({
             }}
             loading={loading}
           >
+            <h1>Hello World</h1>
             {acceptBidStep === AcceptBidStep.Unavailable && !loading && (
               <Flex direction="column" css={{ mt: 80 }}>
                 <Box css={{ color: '$neutralSolidHover', m: '0 auto' }}>

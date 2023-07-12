@@ -506,22 +506,20 @@ export const AcceptBidModalRenderer: FC<Props> = ({
 
   return (
     <>
-      <div className='accept-bid-modal'>
-        {children({
-          loading: isFetchingBidPath || isFetchingTokenData,
-          tokensData: enhancedTokens,
-          acceptBidStep,
-          transactionError,
-          txHash,
-          usdPrices,
-          prices,
-          address,
-          blockExplorerBaseUrl,
-          acceptBid,
-          setAcceptBidStep,
-          stepData,
-        })}
-      </div>
+      {children({
+        loading: isFetchingBidPath || isFetchingTokenData,
+        tokensData: enhancedTokens,
+        acceptBidStep,
+        transactionError,
+        txHash,
+        usdPrices,
+        prices,
+        address,
+        blockExplorerBaseUrl,
+        acceptBid,
+        setAcceptBidStep,
+        stepData,
+      })}
     </>
   )
 }
