@@ -176,7 +176,7 @@ export function CartPopover({
                 />
               )}
               <Flex align="center" css={{ mb: '$4' }}>
-                <Text style="h6">Cartyyyyyyy</Text>
+                <Text style="h6">Cart (NEW)</Text>
                 {!isCartEmpty && (
                   <Flex
                     align="center"
@@ -312,7 +312,7 @@ export function CartPopover({
                       style={{ height: 30 }}
                     />
                     <Text style="body2" color="subtle">
-                      No items in your cart - TESTINGGG
+                      No items in your cart
                     </Text>
                   </Flex>
                 )}
@@ -410,7 +410,7 @@ export function CartPopover({
                   </Flex>
                 )}
                 {isCartEmpty && !displayPendingTransaction && (
-                  <Button disabled={true}>Select Items to Buy....</Button>
+                  <Button disabled={true}>Select Items to Buy</Button>
                 )}
                 {!isCartEmpty &&
                   hasValidItems &&

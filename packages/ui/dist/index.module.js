@@ -13891,7 +13891,7 @@ function $6649489e0491bc82$export$15123b0cb184ed6e({ trigger: trigger , side: si
             }
         }, /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $38b6348718e47dcf$export$2e2bcd8739ae039), {
             style: "h6"
-        }, "Cartyyyyyyy"), !isCartEmpty && /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $602940fa56061b3b$export$2e2bcd8739ae039), {
+        }, "Cart (NEW)"), !isCartEmpty && /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $602940fa56061b3b$export$2e2bcd8739ae039), {
             align: "center",
             justify: "center",
             css: {
@@ -13998,7 +13998,7 @@ function $6649489e0491bc82$export$15123b0cb184ed6e({ trigger: trigger , side: si
         }), /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $38b6348718e47dcf$export$2e2bcd8739ae039), {
             style: "body2",
             color: "subtle"
-        }, "No items in your cart - TESTINGGG")), /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $602940fa56061b3b$export$2e2bcd8739ae039), {
+        }, "No items in your cart")), /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $602940fa56061b3b$export$2e2bcd8739ae039), {
             direction: "column",
             css: {
                 mt: "auto",
@@ -14095,7 +14095,7 @@ function $6649489e0491bc82$export$15123b0cb184ed6e({ trigger: trigger , side: si
             logoWidth: 10
         })), isCartEmpty && !displayPendingTransaction && /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $e6a4e3d86984e475$export$2e2bcd8739ae039), {
             disabled: true
-        }, "Select Items to Buy...."), !isCartEmpty && hasValidItems && (transaction?.status === (0, $ad5b3085b935ed8c$export$de7bcda3c490bf18).Idle || !displayPendingTransaction) && /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $e6a4e3d86984e475$export$2e2bcd8739ae039), {
+        }, "Select Items to Buy"), !isCartEmpty && hasValidItems && (transaction?.status === (0, $ad5b3085b935ed8c$export$de7bcda3c490bf18).Idle || !displayPendingTransaction) && /*#__PURE__*/ (0, $TBcmg$react).createElement((0, $e6a4e3d86984e475$export$2e2bcd8739ae039), {
             disabled: !hasEnoughCurrency && isConnected,
             onClick: async ()=>{
                 if (!isConnected) onConnectWallet?.();
